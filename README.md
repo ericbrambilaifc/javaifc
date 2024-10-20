@@ -29,19 +29,50 @@ Extende a classe Ex1Computador e adiciona configurações específicas para note
 4. Ex1Principal
 Classe principal que contém a interface gráfica (UI) do programa. Implementa o fluxo de seleção de componentes e exibe o valor final ao usuário.
 
-Como Utilizar
-Requisitos
-Java JDK 8 ou superior
-IDE de sua escolha (Eclipse, IntelliJ, etc.)
-Instruções
-Clone este repositório ou baixe o código fonte.
-Importe o projeto em sua IDE preferida.
-Execute a classe Ex1Principal para iniciar a aplicação.
-Na interface gráfica, selecione o tipo de computador, os componentes desejados, e veja o valor total da compra.
-Exemplo de Execução
+# Exemplo de Execução
 Escolha do Tipo de Computador:
 Desktop ou Notebook
 Configuração dos Componentes:
 Escolha o processador, placa-mãe, memória, etc.
 Resultado Final:
 O valor total da compra será exibido, com ou sem garantia estendida.
+
+# Veículo Manager
+É uma aplicação Java que permite gerenciar diferentes tipos de veículos e calcular seus respectivos valores de IPVA, seguro, e valor atual com base no ano de fabricação e no tipo do veículo. A aplicação suporta caminhões, automóveis e motos, cada um com regras específicas para o cálculo dos valores.
+
+Funcionalidades
+Cálculo do IPVA: Baseado no tempo de uso do veículo e no tipo (Caminhão, Automóvel ou Moto).
+Cálculo do Seguro: Cálculo variável de acordo com o tipo do veículo.
+Cálculo do Valor Total: Aplica depreciação conforme o ano de fabricação.
+Interface Gráfica: Interface desenvolvida com JFrame para facilitar a entrada de dados e a visualização dos resultados.
+Estrutura do Projeto
+O projeto contém as seguintes classes:
+
+Ex2Veiculo: Classe base para todos os veículos, contendo atributos como modelo, ano de fabricação e valor, além de métodos genéricos para cálculo de valores.
+
+Ex2Automovel: Extensão da classe Ex2Veiculo, implementa cálculos específicos de automóveis para IPVA, seguro e valor total.
+
+Ex2Moto: Extensão da classe Ex2Veiculo, implementa cálculos específicos de motos para IPVA e valor total.
+
+Ex2Caminhao: Extensão da classe Ex2Veiculo, implementa cálculos específicos de caminhões para IPVA, seguro e valor total. Também considera a capacidade de carga do caminhão no cálculo do seguro.
+
+Ex2Principal: Classe principal que implementa a interface gráfica (JFrame), permitindo ao usuário selecionar o tipo de veículo, inserir os dados necessários, e exibir os resultados.
+
+Como Usar
+Interface Gráfica: Ao iniciar o programa, uma janela será exibida onde você poderá selecionar o tipo de veículo (Caminhão, Automóvel ou Moto).
+
+Entrada de Dados:
+
+Preencha os campos de Modelo, Ano de Fabricação e Valor.
+Para caminhões, será necessário inserir também a capacidade em toneladas.
+Cálculo: Após inserir os dados, clique no botão Calcular para visualizar os resultados de IPVA, seguro e valor total do veículo.
+
+
+# Exemplo de Uso
+Selecionar Caminhão: Preencher os dados do caminhão, incluindo a capacidade, ano e valor, e clicar em "Calcular". O programa exibirá o valor do IPVA, seguro e valor total do caminhão.
+
+Selecionar Automóvel: Inserir o ano de fabricação e o valor, e clicar em "Calcular". O programa exibirá o valor do IPVA, seguro (se aplicável) e o valor total do automóvel.
+
+Selecionar Moto: Inserir os dados da moto e clicar em "Calcular" para ver os valores correspondentes.
+
+
